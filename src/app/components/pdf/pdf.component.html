@@ -1,0 +1,15 @@
+<p>pdf works!</p>
+<div>
+    <label for="">pdf source</label>
+    <input type="file" (change)="onFileSelected()" id ="file">
+    <input type="text" [(ngModel)]="page" id="page">
+    <pdf-viewer
+     [src]="pdfSrc"
+     [render-text] ="true"
+     [page]="page"
+     [show-all]="false"
+     style="display: block;">
+    </pdf-viewer>
+  </div>
+
+  <!-- if show-all = true, all pages of pdf will be shown -->
